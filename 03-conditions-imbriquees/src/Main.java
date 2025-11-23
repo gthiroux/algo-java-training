@@ -26,7 +26,6 @@ public class Main {
             System.out.println("Mineur");
             System.out.println("Acces refuse");
         }
-
         System.out.println("Solde final : " + solde);
     }
 }
