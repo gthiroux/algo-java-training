@@ -78,4 +78,4 @@ Apres doubler : nombre =20
 Pourquoi `modifierNombre` n'a pas changé `nombre` mais `modifierTableau` a changé `tableau[0]` ?
 
 Réponse : modifierNombre ne retourne pas le nombre donc ne mmodifie pas l'original mais seulement une copie qui disparait après que la fonction s'arrete.
-modifierTableau modifie le tableau[0] car
+modifierTableau modifie le tableau[0] car je fais référence à mon tableau d'origine et je ne crée pas une copie du tableau donc toutes modifications faites modifient mon tableau d'origine
