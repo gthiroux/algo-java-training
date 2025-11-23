@@ -6,12 +6,12 @@ Dessine la pile au fur et à mesure :
 
 ```
 Étape 1: [main]
-Étape 2: [main, ___]
-Étape 3: [main, ___, ___]
-Étape 4: [main, ___, ___, ___]
-Étape 5: [main, ___, ___]  ← retour de ___
-Étape 6: [main, ___]       ← retour de ___
-Étape 7: [main]            ← retour de ___
+Étape 2: [main, a]
+Étape 3: [main, a, b]
+Étape 4: [main, a, b, c]
+Étape 5: [main, a, b]  ← retour de c
+Étape 6: [main, a]       ← retour de b
+Étape 7: [main]            ← retour de a
 ```
 
 ---
@@ -19,46 +19,57 @@ Dessine la pile au fur et à mesure :
 ## Traçage dans l'ordre d'exécution
 
 **main :** `a(5)` est appelé
+
 ```
 main: debut
 ```
 
-**a :** reçoit x = ___
-```
+**a :** reçoit x = 5
 
 ```
-
-**a :** appelle `b(x + 1)` → b(___)
-
-**b :** reçoit y = ___
+a: debut avec x= 5
 ```
 
-```
+**a :** appelle `b(x + 1)` → b(5+1)
 
-**b :** appelle `c(y + 1)` → c(___)
-
-**c :** reçoit z = ___
-```
-
+**b :** reçoit y = 5+1 =6
 
 ```
-
-**c :** retourne z * 3 = ___ * 3 = ___
-
-**Retour dans b :** val = ___
+b: debut avec y = 6
 ```
 
-```
-**b :** retourne val + 10 = ___ + 10 = ___
+**b :** appelle `c(y + 1)` → c(6+1)
 
-**Retour dans a :** val = ___
-```
+**c :** reçoit z = 6+1 =7
 
 ```
-**a :** retourne val * 2 = ___ * 2 = ___
+ c: debut avec z = 7
+ c:fin
 
-**Retour dans main :** resultat = ___
 ```
 
+**c :** retourne z _ 3 = 7 _ 3 = 21
+
+**Retour dans b :** val = 21
+
+```
+b : retour de c avec val = 21
+```
+
+**b :** retourne val + 10 = 21 + 10 = 31
+
+**Retour dans a :** val = 31
+
+```
+a: retour de b avec val = 31
+```
+
+**a :** retourne val _ 2 = 31 _ 2 = 62
+
+**Retour dans main :** resultat = 62
+
+```
+main : resultat = 62
+main :fin
 
 ```
