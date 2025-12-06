@@ -1,5 +1,5 @@
 public class Banque {
-    private String nom;
+    private String nom ;
     private Client[] clients;
     private int nbClients;
 
