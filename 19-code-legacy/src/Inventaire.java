@@ -26,7 +26,7 @@ public class Inventaire {
     public void afficher() {
         for (int i = 0; i < nb; i++) {
             System.out.println(prods[i].getNom() + " : " +
-                prods[i].getPrix() + " x " + prods[i].getQuantite());
+                    prods[i].getPrix() + " x " + prods[i].getQuantite());
         }
     }
 
@@ -40,4 +40,13 @@ public class Inventaire {
 
     // TODO: Ajouter la méthode afficherCher(double seuil)
     // qui affiche les produits dont le prix est supérieur au seuil
+    public void afficherCher(double seuil) {
+        for (int i = 0; i < nb; i++) {
+            if (prods[i].getPrix() > seuil) {
+                System.out.println("Le prix de " + prods[i].getNom() + " est supérieur à " + seuil + " euros.");
+            }
+
+        }
+
+    }
 }
