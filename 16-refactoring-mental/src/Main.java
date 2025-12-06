@@ -19,56 +19,81 @@ public class Main {
 
     // Version verbeuse - à simplifier
     public static boolean estPositif(int n) {
-        if (n > 0) {
-            return true;
-        } else {
+        // if (n > 0) {
+        // return true;
+        // } else {
+        // return false;
+        // }
+        if (n < 0) {
             return false;
         }
+        return true;
     }
 
     // Version verbeuse - à simplifier
     public static int valeurAbsolue(int n) {
+        // if (n < 0) {
+        // n = n * -1;
+        // return n;
+        // } else {
+        // return n;
+        // }
         if (n < 0) {
             n = n * -1;
-            return n;
-        } else {
-            return n;
         }
+        return n;
     }
 
     // Version verbeuse - à simplifier
     public static boolean estPair(int n) {
-        int reste = n % 2;
-        if (reste == 0) {
-            return true;
-        } else {
+        // int reste = n % 2;
+        // if (reste == 0) {
+        // return true;
+        // } else {
+        // return false;
+        // }
+        if (n % 2 != 0) {
             return false;
         }
+        return true;
     }
 
     // Version verbeuse - à simplifier
     public static int max(int a, int b) {
-        int resultat;
+        // int resultat;
+        // if (a > b) {
+        // resultat = a;
+        // } else {
+        // resultat = b;
+        // }
+        // return resultat;
         if (a > b) {
-            resultat = a;
+            return a;
         } else {
-            resultat = b;
+            return b;
         }
-        return resultat;
     }
 
     // Version verbeuse - à simplifier
     public static String signe(int n) {
-        String resultat;
-        if (n > 0) {
-            resultat = "positif";
-        } else {
+        // String resultat;
+        // if (n > 0) {
+        // resultat = "positif";
+        // } else {
+        // if (n < 0) {
+        // resultat = "negatif";
+        // } else {
+        // resultat = "zero";
+        // }
+        // }
+        // return resultat;
+        if (n != 0) {
             if (n < 0) {
-                resultat = "negatif";
-            } else {
-                resultat = "zero";
+                return "negatif";
             }
+            return "positif";
+        } else {
+            return "zero";
         }
-        return resultat;
     }
 }
