@@ -62,7 +62,7 @@ public class Main {
                     t[j] = t[j + 1];
                     t[j + 1] = tmp;
                 }
-            }
+            } 
         }
     }
 
